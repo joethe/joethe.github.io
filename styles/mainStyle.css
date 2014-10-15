@@ -127,6 +127,11 @@ a:hover {
 
     /* Will adapt column width for 2 or 4 column layouts. (defaults to 3 column) */
     /* Thanks to: http://lea.verou.me/2011/01/styling-children-based-on-their-number-with-css3/ */
+    .row div:first-child:nth-last-child(1),
+    .row div:first-child:nth-last-child(1) ~ div {
+       width: 96%;
+    }
+    
     .row div:first-child:nth-last-child(2),
     .row div:first-child:nth-last-child(2) ~ div {
         width: 48%;
