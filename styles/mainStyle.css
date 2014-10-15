@@ -1,0 +1,214 @@
+/* Authors:
+   Joseph T.
+   Jacob O.
+*/
+
+/* General Comments */
+/* validated on: Wed. Sep 3, 17:36 */
+
+body {
+    background-color: #497F76;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer {
+    font-size: small;
+}
+
+li {
+    list-style: circle;
+}
+
+td em, h3 {
+    color:darkblue;
+}
+
+a:visited {
+    color: #007F6A;
+}
+
+a:hover {
+    color:darkblue;
+}
+
+#title {
+    position: relative;
+    top: 15px;
+    left: 5%;
+    background-color: #00CCA9;
+    width: 90%;
+    height: 60px;
+    text-align: center;
+    font-size: 3em;
+    font-family: antiqua, calibri, sans-serif;
+    overflow: hidden;
+    color: black;
+}
+
+/* Nav re-sizes funny at very low widths. These values are a sizing unit just like px or em, so it can be used to size other elements as well, such was width, margin or padding. in Google Chrome */
+/* Might try to redo nav to use new HTML5 stuff later (IE: <nav> and <menuitem>)*/
+#navigation {
+    position: relative;
+    left: 10%;
+    /*top: 50px; */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #00CCA9;
+    width: 80%;
+    overflow: hidden;
+}
+
+#navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#navigation li {
+    padding-right: 10px;
+    padding-left: 10px;
+    display: inline;
+    float: left;
+}
+
+#navigation a {
+    display: block;
+    padding: 8px;
+    width: 60px;
+    text-align: center;
+}
+
+#navigation .active {
+    background-color: #71FFE7;
+}
+
+#content {
+    position: relative;
+    margin-top: 30px;
+    padding: 5px;
+    left: 5%;
+    width: 90%;
+    background-color: #71FFE7;
+    color: black;
+}
+
+/*contains the columns?*/
+.row {
+    display: table;
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.row div {
+    display: inline;
+    padding: 1%;
+    width: 90%;
+    float: none;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* THE FOLLOWING MEDIA QUERIES MAY HAVE ISSUES ON OLD VERSIONS OF Internet Explorer, LEAVING THIS PORTION OF THE PAGE WITH THE DEFAULT STYLING. */
+
+/*side-by-side column layout if screen is big enough*/
+/*Don't know exactly how this works with only the one media query, but I guess it does... */
+/*These should be the only "new to" CSS3 features we have... */
+@media (min-width: 800px) {
+    .row div {
+        display: table-cell;
+        padding: 1%;
+        width: 31.3%;
+        float: left;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    /* Will adapt column width for 2 or 4 column layouts. (defaults to 3 column) */
+    /* Thanks to: http://lea.verou.me/2011/01/styling-children-based-on-their-number-with-css3/ */
+    .row div:first-child:nth-last-child(2),
+    .row div:first-child:nth-last-child(2) ~ div {
+        width: 48%;
+    }
+
+    .row div:first-child:nth-last-child(4),
+    .row div:first-child:nth-last-child(4) ~ div {
+        width: 23%;
+    }
+}
+
+.row div h1, .row div h2 {
+    text-align: center;
+}
+
+.row div hr{
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 90%;
+    background: #333;
+}
+
+.row div img {
+    display: block;
+    width: 80%;     /* 80$ looks a little silly sometimes on smaller screens, but it's not terrible. Minor issue. */
+    height: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Details feature is not yet supported by firefox... */
+.row details {
+    font-size: 0.9em;
+    color: grey;
+    width: 80%;  /* same as the pictures! */
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.progressList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.progressList li {
+    list-style: none;
+    padding-left: 1em;
+    text-indent: -0.7em;
+}
+
+/* the :before selector counts as a css3 feature.....? */
+.progressList li:before {
+    content: "⌨";
+    padding-right: 7px;
+}
+
+.progressList .complete:before {
+    content: "⌨";
+    padding-right: 7px;
+    color: green;
+}
+
+.progressList .incomplete:before {
+    content: "⌨";
+    padding-right: 7px;
+    color: red;
+}
+
+.footer {
+    position: relative;
+    left: 5%;
+    width: 90%;
+    text-align: center;
+}
+
+
+/* Color Scheme:
+007F6A
+71FFE7
+00FFD3
+497F76
+00CCA9
+*/
