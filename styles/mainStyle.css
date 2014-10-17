@@ -38,7 +38,7 @@ a:hover {
     left: 5%;
     background-color: #00CCA9;
     width: 90%;
-    height: 60px;
+    /*height: 100px;*/
     text-align: center;
     font-size: 3em;
     font-family: antiqua, calibri, sans-serif;
@@ -129,7 +129,7 @@ a:hover {
     /* Thanks to: http://lea.verou.me/2011/01/styling-children-based-on-their-number-with-css3/ */
     .row div:first-child:nth-last-child(1),
     .row div:first-child:nth-last-child(1) ~ div {
-       width: 100%;
+       width: 98%;
     }
     
     .row div:first-child:nth-last-child(2),
@@ -200,6 +200,11 @@ a:hover {
     content: "⌨";
     padding-right: 7px;
     color: red;
+}
+
+.subtext {
+    color: gray;
+    font-size: 14px;
 }
 
 .footer {
