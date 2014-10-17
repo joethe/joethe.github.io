@@ -8,6 +8,8 @@
 
 body {
     background-color: #497F76;
+    background-image: url("../assets/images/cloth.png");
+    background-repeat: repeat-y;
     color: black;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -202,8 +204,12 @@ a:hover {
     color: red;
 }
 
+.blockDisplay {
+    display: block;
+}
+
 .subtext {
-    color: gray;
+    color: dimgray;
     font-size: 14px;
 }
 
