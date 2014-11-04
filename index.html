@@ -10,6 +10,9 @@ Jacob O.
     <title>stuff and things</title>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <link rel="stylesheet" type="text/css" href="styles/mainStyle.css" />
+
+    <script src="node_modules/angular/angular.js" ></script>
+    <script src="main.js"></script>
 </head>
 
 <!-- GENERAL COMMENTS / WARNINGS -->
@@ -17,7 +20,7 @@ Jacob O.
 <!-- The details element is not supported properly by browsers yet (firefox...). It would probably be better to wait for implementations. -->
 <!-- Apparently I'm not allowed to put images inside <a> tags....? -->
 
-<body>
+<body ng-app="mainPage" ng-controller="mainController">
 
 <div id="title">
     Joseph Thelen
@@ -31,6 +34,8 @@ Jacob O.
         <li><a href="About.html">About</a></li>
     </ul>
 </div>
+
+<div ng-include="'components/navbar/navbar.html'"></div>
 
 <div id="content">
 
@@ -49,8 +54,15 @@ Jacob O.
                 drones (multi rotor and otherwise), networking (IT), photography, graphic design, firearms and ammunition, various heavy machinery, psychology and, of course, computer science.
             </p>
         </div>
-        <div>
-
+        <div class="row">
+            <div>
+                <img src="assets/images/robot1.jpg" />
+                <img src="assets/images/frcbreakaway.JPG" />
+            </div>
+            <div>
+                <img src="assets/images/hbridge.png" />
+                <img src="assets/images/frcriver.jpg" />
+            </div>
         </div>
     </div>
     <div class="row">
@@ -63,11 +75,11 @@ Jacob O.
                 that I worked on as part of a software design course. The goal of the assignment was, essentially, to create a decent looking site that was relatively responsive
                 while using only basic HTML and CSS, with limitations on the number of CSS3 and HTML5 specific features that could be used. In the end my lab partner and I
                 managed to fulfill those requirements, and I'm rather fond of the result. Although complicated frameworks and tools have their place, sometimes it's just nice to
-                work without them; especially for a site like this where the only one editing the content is me, and said content does not need to change very frequently.
+                work without them; especially for a site like this where the only person editing the content is me, and said content does not need to change very frequently.
             </p>
         </div>
         <div>
-            <h1>What is this site for?</h1>
+            <h1>What is this website for?</h1>
             <hr>
             <p>
                 I suppose it's here to provide a bit of information about myself to anyone who desires it; unless you're creepy. If you're creepy just go away or something. If you were hoping
@@ -77,38 +89,17 @@ Jacob O.
 
         </div>
         <div>
-            <h1>Circle Tables</h1>
+            <h1>Why three columns?</h1>
             <hr>
-            <a href="https://www.flickr.com/photos/philmanker/3590222716"><img src="https://farm3.staticflickr.com/2445/3590222716_dff0420ab3_s.jpg" alt="Harvard HGSE Computer Tables"></a>
-            <details>
-                <summary>Circle Tables</summary>
-                <p>These are some sweet circle tables with computers on them. Gotta love those circle tables...</p>
-            </details>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur augue ipsum, convallis in lorem at, cursus interdum risus.
-                Phasellus sodales velit dui, nec dapibus metus imperdiet vel. Phasellus faucibus est nec aliquam volutpat.
-                Curabitur mattis tortor vel dolor finibus, vel semper lorem elementum. Mauris quis est leo.
-                Nulla neque quam, gravida sit amet felis non, auctor tincidunt nibh. Fusce cursus velit eget metus convallis, id varius sapien congue.
-                Proin fermentum, libero ac bibendum fermentum, risus tellus luctus purus, facilisis consectetur lacus elit ut lorem.
-                Integer sit amet nulla et velit tincidunt accumsan. Aenean at ex libero. Vivamus tempus, leo vel interdum faucibus, risus nulla tempor elit, sit amet ultrices mi urna at ante.
+            <p>
+                Well, I went with three columns down here because I thought they looked nice... I can't actually think
+                of anything to put here yet...
             </p>
         </div>
     </div>
-
 </div>
 
-<div class="footer">
-    <footer>
-        <p>
-            This site, as it stands now, is almost entirely a copy of a small site I worked on with <a href="https://github.com/Jacoby04">Jacob</a> as
-            part of a software design course.<br>
-            I plan to eventually make many alterations, but for now it shall remain as it is with only the information it contains
-            being altered.
-        </p>
-        <p>
-            contact@nickelandli.me
-        </p>
-    </footer>
-</div>
+<div ng-include="'components/footer/footer.html'"></div>
 
 </body>
 </html>

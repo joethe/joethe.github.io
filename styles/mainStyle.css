@@ -165,6 +165,11 @@ a:hover {
     margin-right: auto;
 }
 
+.imagePlain {
+    width: auto;
+    height: auto;
+}
+
 /* Details feature is not yet supported by firefox... */
 .row details {
     font-size: 0.9em;
