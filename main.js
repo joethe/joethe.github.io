@@ -1,20 +1,11 @@
 angular.module('mainPage', [])
     .controller('mainController', ['$scope', function(){
 
-
     }])
 
-    .controller('navbarCtrl', ['$scope', function($scope, $location){
+    .controller('navbarCtrl', ['$scope', function($scope){
         $scope.menu = [
-            {title:'home', link:'/index.html'},
-            {title:'About', link:'/About.html'}
+            {title:'Home', link:'index.html'},
+            {title:'About', link:'About.html'}
         ];
-
-        $scope.returnLocation = function(){
-            return $location.path();
-        };
-
-        $scope.isActive = function(route) {
-            return route === $location.path();
-        }
     }]);
