@@ -6,6 +6,6 @@ angular.module('mainPage', [])
     .controller('navbarCtrl', ['$scope', function($scope){
         $scope.menu = [
             {title:'Home', link:'index.html'},
-            {title:'About', link:'About.html'}
+            {title:'Projects', link:'Projects.html'}
         ];
     }]);

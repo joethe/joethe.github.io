@@ -2,8 +2,7 @@
 <div ng-controller="navbarCtrl">
     <div id="navigation">
         <ul>
-            <li ng-repeat="item in menu" class="active-{{isActive(item.link)}}"><a ng-href="{{item.link}}">{{item.title}}</a></li>
+            <li ng-repeat="item in menu"><a ng-href="{{item.link}}">{{item.title}}</a></li>
         </ul>
     </div>
-    {{returnLocation()}}
 </div>

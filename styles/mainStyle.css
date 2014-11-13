@@ -81,7 +81,7 @@ a:hover {
     text-align: center;
 }
 
-#navigation .active {
+#navigation .active-true {
     background-color: #71FFE7;
 }
 
