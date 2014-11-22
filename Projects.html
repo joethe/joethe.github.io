@@ -8,7 +8,7 @@
     <script src="bower_components/angular/angular.js" ></script>
     <script src="main.js"></script>
 </head>
-<body ng-app="mainPage">
+<body ng-app="mainApp" ng-controller="projectsCtrl">
 
     <div id="title">
         Projects
@@ -19,10 +19,23 @@
     <div ng-include="'components/navbar/navbar.html'"></div>
 
     <div id="content">
-        Nothing here yet... :(
+        <div class="row">
+            <div class="leftNav">
+                <ul ng-repeat="project in projectsIndex">
+                    <li><button class="active-{{isActiveProject(project.link)}}" ng-click="setActiveProject(project.link)">{{project.title}}</button></li>
+                </ul>
+                <p class="subtext">This page isn't responsive yet, sorry if anyone is trying to read this garbage on a phone.</p>
+            </div>
+            <div class="rightContent">
+                <div ng-include="activeProject"></div>
+            </div>
+        </div>
     </div>
 
 
 
 </body>
+
+<div ng-include="'components/footer/footer.html'"></div>
+
 </html>
