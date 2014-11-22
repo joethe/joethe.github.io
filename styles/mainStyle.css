@@ -127,13 +127,13 @@ a:hover {
     .row div {
         display: table-cell;
         padding: 1%;
-        width: 31.3%;
+        width: 98%;
         float: left;
         margin-right: 0;
         margin-left: 0;
     }
 
-    /* Will adapt column width for 2 or 4 column layouts. (defaults to 3 column) */
+    /* Will adapt column width for 2 or 4 column layouts. (defaults to 1 column) */
     /* Thanks to: http://lea.verou.me/2011/01/styling-children-based-on-their-number-with-css3/ */
     .row div:first-child:nth-last-child(1),
     .row div:first-child:nth-last-child(1) ~ div {
@@ -143,6 +143,11 @@ a:hover {
     .row div:first-child:nth-last-child(2),
     .row div:first-child:nth-last-child(2) ~ div {
         width: 48%;
+    }
+
+    .row div:first-child:nth-last-child(3),
+    .row div:first-child:nth-last-child(3) ~ div {
+        width: 31.3%;
     }
 
     .row div:first-child:nth-last-child(4),
@@ -202,12 +207,12 @@ a:hover {
     background-color: #00CCA9 !important;
 }
 
-.row .rightContent {
+.rightContent {
     width: 70% !important;
     border-left: 2px solid rgba(255, 255, 255, 0.2);
 }
 
-.smallImages img{
+.smallImage img{
     width: 50% !important;
 }
 
