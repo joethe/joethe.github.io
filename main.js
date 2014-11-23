@@ -9,6 +9,7 @@ angular.module('mainApp', [])
             {title:'Projects', link:'Projects.html'},
             {title:'About', link:'About.html'}
         ];
+
     }])
 
     .controller('projectsCtrl', ['$scope', function($scope){
