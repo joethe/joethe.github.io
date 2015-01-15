@@ -120,6 +120,17 @@ a:hover {
     margin-left: auto;
 }
 
+
+/*.row .leftNav {
+    display: table-cell;
+    padding: 1%
+    width: 98% 
+    float: left;
+    margin-right: 0;
+    margin-left: 0;
+}
+*/
+
 /* THE FOLLOWING MEDIA QUERIES MAY HAVE ISSUES ON OLD VERSIONS OF Internet Explorer, LEAVING THIS PORTION OF THE PAGE WITH THE DEFAULT STYLING. */
 
 /*side-by-side column layout if screen is big enough*/
@@ -133,6 +144,15 @@ a:hover {
         float: left;
         margin-right: 0;
         margin-left: 0;
+    }
+
+    .row .leftNav {
+	display: table-cell;
+	padding: 1%;
+	width: 25% !important; 
+	float: left;
+	margin-right: 0;
+	margin-left: 0;
     }
 
     /* Will adapt column width for 2 or 4 column layouts. (defaults to 1 column) */
@@ -178,14 +198,16 @@ a:hover {
     margin-right: auto;
 }
 
+/*
 .row .leftNav {
     display: table-cell;
     padding: 1%;
     float: left;
     margin-right: 0;
     margin-left: 0;
-    width: 25% !important;
+    width: 25%;
 }
+*/
 
 .row .leftNav ul{
     list-style: none;
