@@ -24,7 +24,6 @@
                 <ul ng-repeat="project in projectsIndex">
                     <li><button class="active-{{isActiveProject(project.link)}}" ng-click="setActiveProject(project.link)">{{project.title}}</button></li>
                 </ul>
-                <p class="subtext">This page isn't responsive yet, sorry if anyone is trying to read this garbage on a phone.</p>
             </div>
             <div class="rightContent" ng-include="activeProject" style="overflow: auto;">
 
