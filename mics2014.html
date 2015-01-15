@@ -64,6 +64,7 @@
     robot tended to slide down-slope slightly when moving sideways. This unwanted movement could be compensated for slightly in code, but remains troublesome under certain
     circumstances.
 </p>
+<p> Each wheels was independently driven by a single NXT motor.</p>
 <p>
     The wheels we used can be found <a href="https://secure.robotshop.com/en/lego-compatible-mecanum-wheels-4-pieces.html">here</a>. They work well, and are designed to work
     directly with lego stuff. The only gripe I have about them is the price, and that the rubber on the rollers tends to wear out quickly when used on rough surfaces such as
@@ -74,7 +75,14 @@
 
 <p>
     Our need to control NXT parts with an arduino was mostly satisfied by an <a href="http://openelectrons.com/index.php?module=pagemaster&PAGE_user_op=view_page&PAGE_id=9">NXShield-Dx</a>,
-    which was a joy to use. The documentation is pretty good and the provided libraries are relatively comprehensive and easy to work with.
+    which was a joy to use. The documentation is pretty good and the provided libraries are relatively comprehensive and easy to work with. 
+
+    Supplementing the NXShield-Dx and Arduino was a custom h-bridge, which added the ability to control one more motor (or a set of motors, operating together).
+    This was needed due to the limited number of nxt motors that the NXShield-Dx can control (4), all of which were used by our drivetrain.  
+</p>
+<p> 
+    Autonomous navigation and collection / shooting of balls was assisted by 3 NXT ultrasonic rangefinders; one on each side and one facing the downslope section of the playing field. 
+    These sensors were controled by the NXShield-Dx.  
 </p>
 
 
