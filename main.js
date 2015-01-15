@@ -7,7 +7,7 @@ angular.module('mainApp', [])
         $scope.menu = [
             {title:'Home', link:'index.html'},
             {title:'Projects', link:'Projects.html'},
-            {title:'About', link:'About.html'}
+            {title:'Contact', link:'contact.html'}
         ];
 
     }])
