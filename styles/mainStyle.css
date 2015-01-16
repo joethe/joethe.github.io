@@ -20,6 +20,10 @@ body {
     font-size: small;
 }
 
+.centerText {
+    text-align: center;
+}
+
 footer {
     font-size: small;
 }
