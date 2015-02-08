@@ -15,7 +15,8 @@ angular.module('mainApp', [])
     .controller('projectsCtrl', ['$scope', function($scope){
         $scope.projectsIndex = [
             {title:'Playing with virtualization', link:'virtualizationPlayground.html'},
-            {title:'MICS robotics', link:'mics2014.html'}
+            {title:'MICS robotics', link:'mics2014.html'},
+	    {title:'URSA Major', link:'ursaMajor.html'}
         ];
 
         $scope.activeProject = "virtualizationPlayground.html";
