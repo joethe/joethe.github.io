@@ -1,32 +1,31 @@
-angular.module('mainPage', [], function($locationProvider){
-    $locationProvider.html5Mode(true);
-})
-
-    .config(['$routeProvider', function($routeProvider){
-        $routeProvider.when("/index.html")   
-    }])
+angular.module('mainApp', [])
     .controller('mainController', ['$scope', function(){
 
+    }])
+
+    .controller('navbarCtrl', ['$scope', function($scope){
+        $scope.menu = [
+            {title:'Home', link:'index.html'},
+            {title:'Projects', link:'Projects.html'},
+            {title:'Contact', link:'contact.html'}
+        ];
 
     }])
 
-    .controller('navbarCtrl', ['$scope', '$location', function($scope, $location){
-
-        $scope.menu = [
-            {title:'home', link:'index.html'},
-            {title:'About', link:'About.html'}
+    .controller('projectsCtrl', ['$scope', function($scope){
+        $scope.projectsIndex = [
+            {title:'Playing with virtualization', link:'virtualizationPlayground.html'},
+            {title:'MICS robotics', link:'mics2014.html'}
         ];
 
-        $scope.returnLocation = function(){
-            console.log($location.path());
-            var path = $location.path().split("/");
-            var thing = path[path.length - 1];
-            console.log(thing);
-            return $location.path();
+        $scope.activeProject = "virtualizationPlayground.html";
+
+        $scope.setActiveProject = function(link){
+            $scope.activeProject = link;
         };
 
-        $scope.isActive = function(route) {
-            var path = $location.path().split("/");
-            return route === path[path.length - 1];
+        $scope.isActiveProject = function(link){
+            return $scope.activeProject === link;
         }
+
     }]);

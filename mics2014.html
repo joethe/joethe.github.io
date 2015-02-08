@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+
+<html>
+<head>
+    <link rel="stylesheet" href="styles/mainStyle.css" type="text/css">
+</head>
+
+
+<h1>MICS Robotics, 2014</h1>
+<p>
+    Apparently every year there's this Midwest Instruction and Computing (MICS) thing, and a part of this wonderful
+    event is a small robotics competition. The focus of this competition, much like many other robotics competitions,
+    is on accomplishing what is usually a novel task with an autonomous robot. Small teams from a variety of schools
+    participate.
+</p>
+<p>
+    At the 2014 conference the objective for the robotics competition was to score baskets with little foam nerf-like balls, on a
+    slanted playing field. The details of the challenge can be found in this pdf: <a href="http://micsymposium.org/mics2014/Robotics_Rules.pdf">http://micsymposium.org/mics2014/Robotics_Rules.pdf</a>
+</p>
+<div class="row blockDisplay">
+    <div>
+        <p>
+            The robots involved in this competition are relatively small and our school's team(s) tend to use Lego parts to build our robots, as we
+            lack the capacity to really manufacture any of our own structural components.
+        </p>
+        <p>
+            In 2014, our school had two teams participate in the robotics competition. One team used the Lego NXT brick, programmed in java, to control their robot while
+            the other team used an arduino instead. I was on the team using arduino. My primary responsibility on the team was electronics, which involved
+            finding various ways to control Lego NXT parts with an arduino.
+        </p>
+
+        <h3>Short summary of robot specs.</h3>
+        <ul>
+            <li><b>Drivetrain:</b> 4 NXT motors with mecanum wheels.</li>
+            <li><b>Power:</b> 5AA batteries</li>
+            <li><b>Control:</b> Arduino Uno + NXShield-Dx</li>
+            <li><b>Sensors:</b> 3 NXT ultrasonic sensors</li>
+            <li><b>Manipulator:</b> Chain-elevator thing, 2 NXT motors with custom h-bridge.</li>
+        </ul>
+        <figure class="centerCaption centerBlockItem">
+            <img src="assets/images/robot%20demo.gif">
+            <figcaption>Dawwwwwwww</figcaption>
+        </figure>
+    </div>
+    <div>
+        <figure class="centerCaption">
+            <img src="assets/images/hbridge.png" />
+            <figcaption>A cobbled together h-bridge</figcaption>
+        </figure>
+        <figure class="centerCaption">
+            <img src="assets/images/robot1.jpg" />
+            <figcaption>During a redesign of the drivetrain</figcaption>
+        </figure>
+    </div>
+</div>
+
+<br>
+
+<h3>Drivetrain</h3>
+<p>
+    For the drivetrain we decided to go with mecanum wheels. We figured that the horizontal movement would make searching for and collecting balls on the playing field
+    much easier. Another deciding factor was the fact that mecanum wheels are really cool. This turned out pretty well, the only real issue with the approach being that the
+    robot tended to slide down-slope slightly when moving sideways. This unwanted movement could be compensated for slightly in code, but remains troublesome under certain
+    circumstances.
+</p>
+<p> Each wheels was independently driven by a single NXT motor.</p>
+<p>
+    The wheels we used can be found <a href="https://secure.robotshop.com/en/lego-compatible-mecanum-wheels-4-pieces.html">here</a>. They work well, and are designed to work
+    directly with lego stuff. The only gripe I have about them is the price, and that the rubber on the rollers tends to wear out quickly when used on rough surfaces such as
+    plywood.
+</p>
+
+<h3>Control System</h3>
+
+<p>
+    Our need to control NXT parts with an arduino was mostly satisfied by an <a href="http://openelectrons.com/index.php?module=pagemaster&PAGE_user_op=view_page&PAGE_id=9">NXShield-Dx</a>,
+    which was a joy to use. The documentation is pretty good and the provided libraries are relatively comprehensive and easy to work with. 
+
+    Supplementing the NXShield-Dx and Arduino was a custom h-bridge, which added the ability to control one more motor (or a set of motors, operating together).
+    This was needed due to the limited number of nxt motors that the NXShield-Dx can control (4), all of which were used by our drivetrain.  
+</p>
+<p> 
+    Autonomous navigation and collection / shooting of balls was assisted by 3 NXT ultrasonic rangefinders; one on each side and one facing the downslope section of the playing field. 
+    These sensors were controled by the NXShield-Dx.  
+</p>
+
+<h3>Scoring Mechanism</h3>
+<p>
+    Our scoring mechanism consisted of a belt / chain (made of lego parts) with a small platform to hold a ball. The belt is driven by two NXT motors controlled by the aformentioned h-bridge and two NXT
+    buttons acting as limit switches. 
+</p>
+<p>
+    Picking up a ball was acomplished by lowering the platform to floor level and driving into the ball, pushing it against the downslope wall and up unto the platform. Shooting 
+    the ball was acomplished by moving the platform rapidly upward and suddenly stopping, throwing the ball out in front of the robot and (hopefully) into the hoop. 
+</p>
+
+
+
+
+</html>

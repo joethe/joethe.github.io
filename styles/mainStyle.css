@@ -8,10 +8,20 @@
 
 body {
     background-color: #497F76;
-    background-image: url("../assets/images/cloth.png");
-    background-repeat: repeat-y;
+    /*background-image: url("../assets/images/cloth.png");*/
+    /*background-repeat: repeat-y;*/
     color: black;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.centerCaption figcaption {
+    text-align: center;
+    color: gray;
+    font-size: small;
+}
+
+.centerText {
+    text-align: center;
 }
 
 footer {
@@ -81,7 +91,7 @@ a:hover {
     text-align: center;
 }
 
-#navigation .active {
+#navigation .active-true {
     background-color: #71FFE7;
 }
 
@@ -101,6 +111,8 @@ a:hover {
     width: 100%;
     height: auto;
     margin-bottom: 10px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .row div {
@@ -112,6 +124,17 @@ a:hover {
     margin-left: auto;
 }
 
+
+/*.row .leftNav {
+    display: table-cell;
+    padding: 1%
+    width: 98% 
+    float: left;
+    margin-right: 0;
+    margin-left: 0;
+}
+*/
+
 /* THE FOLLOWING MEDIA QUERIES MAY HAVE ISSUES ON OLD VERSIONS OF Internet Explorer, LEAVING THIS PORTION OF THE PAGE WITH THE DEFAULT STYLING. */
 
 /*side-by-side column layout if screen is big enough*/
@@ -121,22 +144,36 @@ a:hover {
     .row div {
         display: table-cell;
         padding: 1%;
-        width: 31.3%;
+        width: 98%;
         float: left;
         margin-right: 0;
         margin-left: 0;
     }
 
-    /* Will adapt column width for 2 or 4 column layouts. (defaults to 3 column) */
+    .row .leftNav {
+	display: table-cell;
+	padding: 1%;
+	width: 25% !important; 
+	float: left;
+	margin-right: 0;
+	margin-left: 0;
+    }
+
+    /* Will adapt column width for 2 or 4 column layouts. (defaults to 1 column) */
     /* Thanks to: http://lea.verou.me/2011/01/styling-children-based-on-their-number-with-css3/ */
     .row div:first-child:nth-last-child(1),
     .row div:first-child:nth-last-child(1) ~ div {
        width: 98%;
     }
-    
+
     .row div:first-child:nth-last-child(2),
     .row div:first-child:nth-last-child(2) ~ div {
         width: 48%;
+    }
+
+    .row div:first-child:nth-last-child(3),
+    .row div:first-child:nth-last-child(3) ~ div {
+        width: 31.3%;
     }
 
     .row div:first-child:nth-last-child(4),
@@ -165,6 +202,49 @@ a:hover {
     margin-right: auto;
 }
 
+/*
+.row .leftNav {
+    display: table-cell;
+    padding: 1%;
+    float: left;
+    margin-right: 0;
+    margin-left: 0;
+    width: 25%;
+}
+*/
+
+.row .leftNav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.row .leftNav ul li {
+    display: block;
+}
+
+.row .leftNav ul li button {
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    border: 0 none transparent;
+    background-color: #71FFE7;
+}
+
+.leftNav .active-true {
+    background-color: #00CCA9 !important;
+}
+
+.rightContent {
+    width: 70% !important;
+    border-left: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.smallImage img{
+    width: 50% !important;
+}
+
+
 .imagePlain {
     width: auto;
     height: auto;
@@ -179,38 +259,16 @@ a:hover {
     margin-left: auto;
 }
 
-.progressList {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.progressList li {
-    list-style: none;
-    padding-left: 1em;
-    text-indent: -0.7em;
-}
-
-/* the :before selector counts as a css3 feature.....? */
-.progressList li:before {
-    content: "⌨";
-    padding-right: 7px;
-}
-
-.progressList .complete:before {
-    content: "⌨";
-    padding-right: 7px;
-    color: green;
-}
-
-.progressList .incomplete:before {
-    content: "⌨";
-    padding-right: 7px;
-    color: red;
-}
 
 .blockDisplay {
-    display: block;
+    display: inline-block;
+}
+
+.centerBlockItem {
+    display: inline;
+    width: 90%
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .subtext {

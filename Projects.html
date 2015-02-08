@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>stuff and things</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="styles/mainStyle.css" />
+
+    <script src="bower_components/angular/angular.js" ></script>
+    <script src="main.js"></script>
+</head>
+<body ng-app="mainApp" ng-controller="projectsCtrl">
+
+    <div id="title">
+        Projects
+        <br>
+        <span class="subtext blockDisplay">Stuff I did or am doing that might be interesting</span>
+    </div>
+
+    <div ng-include="'components/navbar/navbar.html'"></div>
+
+    <div id="content">
+        <div class="row">
+            <div class="leftNav">
+                <ul ng-repeat="project in projectsIndex">
+                    <li><button class="active-{{isActiveProject(project.link)}}" ng-click="setActiveProject(project.link)">{{project.title}}</button></li>
+                </ul>
+            </div>
+            <div class="rightContent" ng-include="activeProject" style="overflow: auto;">
+
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+<div ng-include="'components/footer/footer.html'"></div>
+
+</html>

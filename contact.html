@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>stuff and things</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="styles/mainStyle.css" />
+
+    <script src="bower_components/angular/angular.js" ></script>
+    <script src="main.js"></script>
+</head>
+<body ng-app="mainApp">
+    <div id="title">
+        Contact
+        <br>
+        <span class="subtext blockDisplay">Boring information and stuff</span>
+    </div>
+    <div ng-include="'components/navbar/navbar.html'"></div>
+
+    <div id="content">
+        <div class="row">
+            <div>
+                <div class="row">
+                    <div class="centerText">
+                        <h2>Github</h2>
+                        <hr>
+                        <a href="http://github.com/joethe">http://github.com/joethe</a>
+                    </div>
+                    <div class="centerText">
+                        <h2>Email</h2>
+                        <hr>
+                        <p>contact@nickelandli.me</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<div ng-include="'components/footer/footer.html'"></div>
+
+</html>
