@@ -7,7 +7,7 @@
 /* validated on: Wed. Sep 3, 17:36 */
 
 body {
-    background-color: #4f4f4f;
+    background-color: #696969;
     /*background-color: #497F76; */
     /*background-image: url("../assets/images/cloth.png");*/
     /*background-repeat: repeat-y;*/
@@ -104,7 +104,7 @@ a:hover {
     padding: 5px;
     left: 5%;
     width: 90%;
-    background-color: #999999;
+    background-color: #56A1E5;
     /*background-color: #71FFE7;*/
     color: black;
 }
