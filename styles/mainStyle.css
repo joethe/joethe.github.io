@@ -91,6 +91,7 @@ a:hover {
     display: block;
     padding: 8px;
     width: 60px;
+    text-decoration: none;
     text-align: center;
 }
 
