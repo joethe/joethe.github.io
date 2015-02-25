@@ -45,6 +45,11 @@ a:hover {
     color:darkblue;
 }
 
+.defaultImageFormat {
+    height: default;
+    width: default;
+}
+
 #title {
     position: relative;
     top: 15px;
