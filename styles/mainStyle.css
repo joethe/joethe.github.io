@@ -190,7 +190,19 @@ a:hover {
     .row div:first-child:nth-last-child(4) ~ div {
         width: 23%;
     }
+
+
+    .rightContent {
+      width: 70% !important;
+      border-left: 2px solid rgba(255, 255, 255, 0.2);
+    }
 }
+
+
+.rightContent {
+   width: 70% !important;
+}
+
 
 .row div h1, .row div h2 {
     text-align: center;
@@ -247,10 +259,6 @@ a:hover {
     /*background-color: #00CCA9 !important;*/
 }
 
-.rightContent {
-    width: 70% !important;
-    border-left: 2px solid rgba(255, 255, 255, 0.2);
-}
 
 .smallImage img{
     width: 50% !important;
