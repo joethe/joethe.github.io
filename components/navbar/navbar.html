@@ -1,8 +1,8 @@
-
-<div ng-controller="navbarCtrl">
+<script src="navbar.js"></script>
+<div>
     <div id="navigation">
-        <ul>
-            <li ng-repeat="item in menu" class="active-{{isActivePage(item.link)}}"><a ng-click="setActivePage(item.link)" ng-href="{{item.link}}">{{item.title}}</a></li>
+        <ul id="navList">
+
         </ul>
     </div>
 </div>

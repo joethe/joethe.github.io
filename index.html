@@ -11,11 +11,13 @@ Jacob O.
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <link rel="stylesheet" type="text/css" href="styles/mainStyle.css" />
 
-    <script src="bower_components/angular/angular.js" ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.js"
+      integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+      crossorigin="anonymous">
+    </script>
     <script src="main.js"></script>
 </head>
-
-<body ng-app="mainApp" ng-controller="mainController">
 
 <div id="title">
     Joseph Thelen
@@ -23,7 +25,7 @@ Jacob O.
     <span class="subtext blockDisplay">A person on the internet who needs to find a less expensive hobby</span>
 </div>
 
-<div ng-include="'components/navbar/navbar.html'"></div>
+<div id="navbar"></div>
 
 <div id="content">
 
@@ -68,7 +70,7 @@ Jacob O.
 		sad little kittens, and I will continue to use them in the absense of any team members to remind me how ugly they are.
 
 		That said, this website is my attempt to make a responsive site using as few tools and frameworks as possible, which I can maintain using only Github and VIM.
-		So far I'd like to think it's turning out pretty well. There is text here, it is decently readable and can be organized into columns with little to no effort on my part, and 
+		So far I'd like to think it's turning out pretty well. There is text here, it is decently readable and can be organized into columns with little to no effort on my part, and
 		all I have to do is push more changes to github. Now all I need is spellcheck in VIM...
             </p>
         </div>
@@ -92,7 +94,7 @@ Jacob O.
     </div>
 </div>
 
-<div ng-include="'components/footer/footer.html'"></div>
+<div id="footer"></div>
 
 </body>
 </html>
