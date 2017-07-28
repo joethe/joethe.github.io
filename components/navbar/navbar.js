@@ -1,6 +1,6 @@
 var navItems = [
   {title: 'Home', link:'index.html'},
-  {title: 'Projects', link:'projects.html'},
+  {title: 'Projects', link:'Projects.html'},
   {title: 'Contact', link:'contact.html'}
 ];
 
