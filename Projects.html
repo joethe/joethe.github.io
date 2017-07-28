@@ -5,10 +5,15 @@
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <link rel="stylesheet" type="text/css" href="styles/mainStyle.css" />
 
-    <script src="bower_components/angular/angular.js" ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.js"
+      integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+      crossorigin="anonymous">
+    </script>
     <script src="main.js"></script>
+    <script src="projects.js"></script>
 </head>
-<body ng-app="mainApp" ng-controller="projectsCtrl">
+<body>
 
     <div id="title">
         Projects
@@ -16,16 +21,15 @@
         <span class="subtext blockDisplay">Stuff I did or am doing that might be interesting</span>
     </div>
 
-    <div ng-include="'components/navbar/navbar.html'"></div>
+    <div id="navbar"></div>
 
     <div id="content">
         <div class="row">
             <div class="leftNav">
-                <ul ng-repeat="project in projectsIndex">
-                    <li><button class="active-{{isActiveProject(project.link)}}" ng-click="setActiveProject(project.link)">{{project.title}}</button></li>
+                <ul id="projectList">
                 </ul>
             </div>
-            <div class="rightContent" ng-include="activeProject" style="overflow: auto;">
+            <div id="activeProject" class="rightContent" style="overflow: auto;">
 
             </div>
         </div>
@@ -35,6 +39,6 @@
 
 </body>
 
-<div ng-include="'components/footer/footer.html'"></div>
+<div id="footer"></div>
 
 </html>

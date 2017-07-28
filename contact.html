@@ -5,7 +5,11 @@
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <link rel="stylesheet" type="text/css" href="styles/mainStyle.css" />
 
-    <script src="bower_components/angular/angular.js" ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.js"
+      integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+      crossorigin="anonymous">
+    </script>
     <script src="main.js"></script>
 </head>
 <body ng-app="mainApp">
@@ -14,7 +18,7 @@
         <br>
         <span class="subtext blockDisplay">Boring information and stuff</span>
     </div>
-    <div ng-include="'components/navbar/navbar.html'"></div>
+    <div id="navbar"></div>
 
     <div id="content">
         <div class="row">
@@ -30,7 +34,7 @@
                         <hr>
                         <p>contact@nickelandli.me</p>
                     </div>
-		    <div class="centerText"> 
+		    <div class="centerText">
 			<h2>LinkedIn</h2>
 			<hr>
 			<a href="http://www.linkedin.com/pub/joseph-thelen/b3/752/936">
@@ -43,6 +47,6 @@
     </div>
 </body>
 
-<div ng-include="'components/footer/footer.html'"></div>
+<div id="footer"></div>
 
 </html>

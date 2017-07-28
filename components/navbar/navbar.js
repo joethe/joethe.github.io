@@ -11,4 +11,4 @@ $.each(navItems, function(index, value){
   navHtml += newItem;
 });
 
-$("list#navList").html(navHtml);
+$("#navList").html(navHtml);
