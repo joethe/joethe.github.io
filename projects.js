@@ -2,6 +2,7 @@ var projects = [
   {title: 'Playing with virtualization', link:'virtualizationPlayground.html'},
   {title: 'MICS Robotics (2014)', link:'mics2014.html'},
   {title: 'MICS Robotics (2015)', link:'mics2015.html'},
+  {title: 'MICS Robotics (2016)', link:'mics2016.html'},
   {title: 'URSA Major', link: 'ursaMajor.html'},
   {title: 'Software Dev. Support', link: 'softwareDevSetup.html'}
 ];

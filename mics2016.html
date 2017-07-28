@@ -1,0 +1,100 @@
+<! DOCTYPE html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="styles/mainStyle.css" type="text/css">
+  </head>
+
+  <h1>MICS Robotics (2016)</h1>
+  <p>
+    As in the previous two years, in 2016 I participated in the MICS robotics
+    competition. This year, the challenge was to play a sort of golf -
+    attempting to putt a golf ball through an obstacle field in as few hits
+    as possible. The rules are available <a href="http://www.micsymposium.org/mics2016/Robotics_Rules_With_Clarifications.pdf">here</a>.
+    This year, the group I worked on was much smaller - consisting of only 2-3
+    people, and our university only sent one robot to the competition.
+  </p>
+
+  <h2> Robot Summary </h2>
+
+  <div class="row">
+    <div>
+      <h3> Design and Strategy </h3>
+      <p>
+        As in previous years, our robot was primarily constructed of Legos.
+        In order to navigate the field, we opted to try using a computer
+        vision system running on a Raspberry Pi. The idea was to use computer
+        vision to keep track of our robot's position on the field, as well as
+        to plan a course through the obstacles. Hence, the structure of our
+        robot was tall to allow for good view of the field, and the drivetrain
+        was designed to pivot the robot around where the camera and putting
+        mechanism were located.
+      </p>
+
+      <h3> Control System </h3>
+      <p>
+        The same Arduino-shield based control system used in previous years
+        was kept, but was modified to take commands via serial from a
+        Raspberry Pi, which was in charge of vision processing and navigation.
+        Additionally, a number of physical switches attached to the robot frame
+        allow for finer control of the power distribution system for use
+        during development and troubleshooting (i.e. powering the Raspberry Pi
+        for use as a development environment, leaving the majority of other
+        hardware unpowered to conserve battery).
+      </p>
+
+      <h3> Drivetrain </h3>
+      <p>
+        The drivetrain consists of two driven wheels in the front of the robot
+        and two casters in the rear. Each of the two front wheels is driven
+        by a pair of Lego NXT motors. Multiple motors were required because
+        the robot is deceptively heavy.
+      </p>
+    </div>
+    <div>
+      <figure class="centerCaption">
+      <img src="assets/images/mics2016_1.jpg" />
+      <figcaption>
+        The camera can be seen at the top front of the robot, with a white
+        ribbon cable extending upwards out of it.
+      </figcaption>
+    </div>
+  </div>
+
+  <div class="row">
+    <div>
+      <figure class="centerCaption">
+        <img src="assets/images/mics2016_2.jpg" />
+        <figcaption>
+          Blurry, but we can see the power / data umbilical constructed
+          from an old lamp and a monitor power supply.
+        </figcaption>
+      </figure>
+    </div>
+
+    <div>
+      <h3> Power </h3>
+      <p>
+        Given our problems in 2015 with using AA batteries, this year we opted
+        for LiPo batteries instead. The robot runs using a single 4-cell 35C
+        battery. The battery is connected to a fused power supply circuit
+        which uses a pair of TI 'Simple Switchers' to bring the voltage down
+        to 9v for the NXT parts and 5v for the Raspberry Pi. Additionally, the
+        power supply board has a hookup for external 12v power, allowing the
+        robot to run via an umbilical during testing.
+      </p>
+      <p>
+        The LiPo batteries turned out to be a significant improvement over
+        using AA batteries. Run times were between 30 to 60 minutes.
+      </p>
+    </div>
+  </div>
+
+  <h2> Competition Results </h2>
+  <p>
+    Despite numerous problems with our computer vision system, our team managed
+    to tie for first place with the team from Graceland University. Our
+    success can almost entirely be attributed to the fact that a majority of the
+    obstacle configurations could be solved by simply hitting the ball in a
+    straight line, which our robot excelled at.
+  </p>
