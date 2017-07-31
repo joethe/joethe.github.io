@@ -1,5 +1,4 @@
 var projects = [
-  {title: 'Playing with virtualization', link:'virtualizationPlayground.html'},
   {title: 'Home Lab', link:'homeLab.html'},
   {title: 'MICS Robotics (2014)', link:'mics2014.html'},
   {title: 'MICS Robotics (2015)', link:'mics2015.html'},
@@ -9,7 +8,7 @@ var projects = [
 ];
 
 // default project, and var to keep track of current project.
-var currentProject = 'virtualizationPlayground';
+var currentProject = 'homeLab';
 
 var navHtml = "";
 

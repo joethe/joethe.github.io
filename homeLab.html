@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="stylesheet" href="styles/mainStyle.css" type="text/css">
+</head>
+
+  <h1> Home Lab </h1>
+
+  <div class="row">
+    <div>
+      <p>
+        Calling it a "lab" may be a bit of a stretch, but that's what I like to
+        think of it as. This is a description of my humble collection of
+        computing equipment.
+      </p>
+
+      <h3>Storage Server</h3>
+      <p>
+        Born partly of a genuine need for more storage, and partly of a
+        desire to further separate my storage from my desktop computer and
+        whatever ailments befall it. Currently, I trust my data to a bargain-bin
+        motherboard sporting an AMD Phenom II X2 560 processor with a whole
+        2 cores, running at a whopping 3.3 GHz. All of this is housed in a cheap
+        4U rack-mount case with some hotswap bays. It runs CentOS, and the data
+        is kept (relatively) safe by <a href="www.snapraid.it">SnapRaid</a>.
+      </p>
+
+      <h3>PFSense Firewall</h3>
+      <p>
+        A dubious violation of University network usage policy, a little HP
+        Compaq desktop salvaged from the dumpster serves as a firewall and
+        router for my tiny little network, allowing me to isolate some of my
+        stuff from the outside world while still keeping networking configurations
+        on my individual pieces of equipment simple. Although, most importantly,
+        in combination with a switch it allows me to connect more than one thing
+        via wired Ethernet without making anyone too angry.<sup>*</sup>
+      </p>
+
+      <h3>Old HP Desktops</h3>
+      <p>
+        My intention was to set these up to compile a Linux kernel in parallel,
+        hoping to speed up the process somewhat. This hasn't happened yet for a
+        variety of reasons - primarily that I have nowhere to put them. I guess
+        I haven't really found time or motivation to do any work that would require
+        kernel compiling either.
+      </p>
+    </div>
+
+    <div>
+      <h2>Equipment List</h2>
+      <hr>
+      <ul>
+        <li>Storage Server</li>
+        <li>24 Port Gigabit TPLink switch</li>
+        <li>PFSense Firewall</li>
+        <li>Virtual Environment Server</li>
+        <li>Old HP desktops (x3)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div>
+      <h3>Virtual Environment</h3>
+      <p>
+        Not being a fan of having to constantly re-install operating systems
+        when I inevitably screw them up while playing around, at some point I
+        decided to dedicate some hardware to hosting a virtual-environment for
+        running Linux containers and VMs.
+      </p>
+
+      <ul>
+          <li><b>CPU:</b> AMD FX6300 6 core 3.5GHz</li>
+          <li><b>Motherboard:</b> (will update when I find the box, but it's nothing special)</li>
+          <li><b>Memory:</b><strike> 4GB of generic DDR3 (single stick)</strike> Now it has 8GB of generic memory! (2 4GB sticks)</li>
+          <li><b>Storage:</b> 500GB generic hard drive</li>
+          <li><b>Case:</b>(will update when I remember...)</li>
+      </ul>
+      <ul>
+          <li>Operating System: <a href="https://www.proxmox.com/proxmox-ve">Proxmox VE</a></li>
+      </ul>
+
+      <h3>Why Proxmox? Why Not VMware?</h3>
+      <p>
+        I choose Proxmox primarily because of <a href="https://www.youtube.com/watch?v=JvDMLNAxYbI">this</a> Tek Syndicate video. I like open source things, and make an
+        attempt to use them whenever possible as I seem to learn more using them than when using their (usually) more popular counterparts. However now that I've used Proxmox
+        a bit I feel that I can better appreciate VMware, and will try messing around with it in the future.
+      </p>
+    </div>
+
+    <div>
+        <figure class="centerCaption">
+          <img src="assets/images/proxmoxServer.jpg">
+          <figcaption>Virtual Environment is the purple/blue one in the back!</figcaption>
+        </figure>
+    </div>
+  </div>
+
+
+  <p class="subtext">
+    <sup>*</sup> This is less important now that I've graduated and
+    no longer need to worry about University network policy...
+  </p>
+
+</html>
