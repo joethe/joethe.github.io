@@ -37,6 +37,11 @@ td em, h3 {
     color:darkblue;
 }
 
+h4 {
+  padding-bottom: 0px;
+  margin-bottom: -10px;
+}
+
 a:visited {
     /*color: #007F6A; */
 }
